@@ -149,6 +149,12 @@ p {
   color: var(--cloudyColor);
 }
 
+@media screen and (min-width: 768px) {
+  .align-center {
+    display: flex;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .what-we-doing {
     padding-bottom: 120px;
@@ -196,7 +202,7 @@ p {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url(./images/background@2x.jpg);
+    url(./images/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -220,6 +226,21 @@ p {
 @media screen and (min-width: 1200px) {
   .background {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .background {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url(./images/background@2x.jpg);
   }
 }
 
@@ -664,7 +685,7 @@ footer p {
   }
 
   .nav-list {
-    margin-bottom: 244px;
+    margin-bottom: 180px;
   }
 
   .nav-text {
@@ -693,6 +714,9 @@ footer p {
     padding-top: 16px;
     padding-left: 40px;
     text-align: left;
+
+    display: flex;
+    flex-direction: column;
   }
 
   .modal-text-position:focus {
